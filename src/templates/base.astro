@@ -1,0 +1,39 @@
+---
+import { Footer } from "@/partials/footer";
+import { Navbar } from "@/partials/navbar";
+import { AppConfig } from "@/utils/app-config";
+
+import "../styles/main.css";
+
+export interface Props {
+  head: {
+    title: string;
+    description: string;
+  };
+}
+
+const {
+  head: { title, description },
+} = Astro.props as Props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content={AppConfig.author} />
+
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <script type="text/javascript" src="/theme-settings.js"></script>
+  </head><body class="bg-gray-900 text-white">
+    <Navbar />
+
+    <slot />
+
+    <Footer />
+  </body>
+</html>

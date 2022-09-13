@@ -1,0 +1,23 @@
+---
+import type { FrontMatter } from '@/components';
+
+import { BlogPost } from '@/partials/blog-post';
+import { CTA } from '@/partials/cta';
+import Base from '@/templates/base.astro';
+import { AppConfig } from '@/utils/app-config';
+
+export interface Props {
+  content: FrontMatter;
+}
+
+const { content } = Astro.props as Props;
+const title = `${content.title} - ${AppConfig.site_name}`;
+---
+
+<Base head={{ title, description: content.description }}>
+  <BlogPost frontmatter={content}>
+    <slot></slot>
+  </BlogPost>
+
+  <CTA />
+</Base>

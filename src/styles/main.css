@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .underlined-link {
+    @apply relative no-underline text-white 
+    before:absolute 
+    before:block 
+    before:w-full 
+    before:h-0.5 
+    before:-bottom-2
+    before:left-0 
+    before:bg-white 
+    before:scale-x-0 
+    before:origin-top-left 
+    before:transition 
+    before:transform 
+    before:duration-300 
+    before:ease-in-out 
+    hover:text-white hover:before:scale-x-100;
+  }
+}

@@ -16,7 +16,7 @@ const Navbar = () => (
       <NavMenu>
         <NavMenuItem href="/posts">Blogs</NavMenuItem>
         <NavMenuItem href="/projects">Projects</NavMenuItem>
-        <NavMenuItem href="/abouts">About</NavMenuItem>
+        <NavMenuItem href="/about">About</NavMenuItem>
       </NavMenu>
     </NavbarTwoColumns>
   </Section>

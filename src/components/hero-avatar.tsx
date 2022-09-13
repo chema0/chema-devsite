@@ -1,4 +1,5 @@
-import type { ReactNode } from 'react';
+import type { ReactNode } from "react";
+import { Button } from "./button";
 
 type IHeroAvatarProps = {
   title: ReactNode;
@@ -12,9 +13,12 @@ const HeroAvatar = (props: IHeroAvatarProps) => (
     <div>
       <h1 className="text-3xl font-bold">{props.title}</h1>
 
-      <p className="mt-6 text-xl leading-9">{props.description}</p>
+      <p className="mt-6 text-xl leading-9 text-justify">{props.description}</p>
 
-      <div className="mt-6 flex gap-3">{props.socialButtons}</div>
+      <div className="flex gap-8 items-center justify-between">
+        <div className="mt-6 flex gap-3">{props.socialButtons}</div>
+        <Button className="mt-6">Tech stack 🡢</Button>
+      </div>
     </div>
 
     <div className="shrink-0">{props.avatar}</div>

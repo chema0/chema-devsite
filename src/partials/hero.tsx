@@ -19,15 +19,20 @@ const Hero = () => (
       }
       description={
         <>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus{" "}
-          <a className="text-indigo-300 hover:underline" href="/">
-            malesuada
+          I am a Computer Engineer based in Murcia{" "}
+          <a href={externalLinks.location}>📍</a>, Spain. Currently I work as a
+          Software Engineer in{" "}
+          <a
+            className="text-indigo-300 hover:underline"
+            href={externalLinks.ddrt}
+          >
+            Digital Data Real Time
           </a>{" "}
-          nisi tellus, non imperdiet nisi tempor at. Lorem ipsum dolor sit amet,{" "}
-          <a className="text-indigo-300 hover:underline" href="/">
-            consectetur
-          </a>{" "}
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+          where we develop amazing things related to smart assets maintenance
+          and IoT stuff.
+          <br />
+          <br />
+          Focused on developing quality software using modern tools and technologies.
         </>
       }
       avatar={

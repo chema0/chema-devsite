@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 
-import type { Values } from '../types/TypeUnion';
+import type { Values } from './types/type-union';
 
 export const ColorTags = {
   SLATE: 'SLATE',

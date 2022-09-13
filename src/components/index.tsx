@@ -1,5 +1,6 @@
 import { BlogCard } from "./blog-card";
 import { BlogGallery } from "./blog-gallery";
+import { Button } from "./button";
 import { FooterCopyright } from "./footer-copyright";
 import { GradientText } from "./gradient-text";
 import { HeroAvatar } from "./hero-avatar";
@@ -28,6 +29,7 @@ export {
   type FrontMatter,
   type MarkdownInstance,
   type Page,
+  Button,
   BlogCard,
   BlogGallery,
   ColorTags,

@@ -1,3 +1,4 @@
+import { Alert } from "./alert";
 import { BlogCard } from "./blog-card";
 import { BlogGallery } from "./blog-gallery";
 import { Button } from "./button";
@@ -29,6 +30,7 @@ export {
   type FrontMatter,
   type MarkdownInstance,
   type Page,
+  Alert,
   Button,
   BlogCard,
   BlogGallery,

@@ -4,9 +4,14 @@ import { ColorTags, Project, Section, Tags } from "@/components";
 const ProjectList = () => (
   <Section
     title={
-      <>
-        Recent <GradientText>Projects</GradientText>
-      </>
+      <div className="flex justify-between items-center">
+        <span>
+          Recent <GradientText>Projects</GradientText>
+        </span>
+        <div className="text-base">
+          <a href="/projects">View all projects →</a>
+        </div>
+      </div>
     }
   >
     <div className="flex flex-col gap-6">
@@ -23,9 +28,12 @@ const ProjectList = () => (
         category={
           <>
             <Tags color={ColorTags.VIOLET}>Next.js</Tags>
-            <Tags color={ColorTags.LIME}>Web design</Tags>
-            <Tags color={ColorTags.SKY}>Tailwind.css</Tags>
+            {/* <Tags color={ColorTags.LIME}>Web design</Tags> */}
+            {/* <Tags color={ColorTags.SKY}>Tailwind.css</Tags> */}
             <Tags color={ColorTags.BLUE}>TypeScript</Tags>
+            <Tags color={ColorTags.PURPLE}>Elixir</Tags>
+            <Tags color={ColorTags.ORANGE}>Phoenix</Tags>
+            <Tags color={ColorTags.SLATE}>PostgreSQL</Tags>
           </>
         }
       />

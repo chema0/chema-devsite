@@ -14,7 +14,7 @@ const Navbar = () => (
       </a>
 
       <NavMenu>
-        <NavMenuItem href="/posts">Blogs</NavMenuItem>
+        {/* <NavMenuItem href="/posts">Blogs</NavMenuItem> */}
         <NavMenuItem href="/projects">Projects</NavMenuItem>
         <NavMenuItem href="/about">About</NavMenuItem>
       </NavMenu>

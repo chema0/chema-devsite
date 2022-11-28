@@ -16,6 +16,8 @@ import { PaginationHeader } from "./pagination-header";
 import { PostContent } from "./post-content";
 import { PostHeader } from "./post-header";
 import { Project } from "./project";
+import { ProjectCard } from "./project-card";
+import { ProjectsGallery } from "./projects-gallery";
 import { Section } from "./section";
 import { ColorTags, Tags } from "./tags";
 import type {
@@ -49,6 +51,8 @@ export {
   PostContent,
   PostHeader,
   Project,
+  ProjectCard,
+  ProjectsGallery,
   Section,
   Tags,
 };

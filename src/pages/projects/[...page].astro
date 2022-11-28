@@ -1,0 +1,56 @@
+---
+import type { FrontmatterPage, FrontMatter } from "@/components";
+import {
+  ProjectsGallery,
+  NewerOlderPagination,
+  PaginationHeader,
+  Section,
+} from "@/components";
+
+import { CTA } from "@/partials/cta";
+import Base from "@/templates/base.astro";
+import { AppConfig } from "@/utils/app-config";
+import { sortByDate } from "@/utils/posts";
+
+type GetStaticPaths = {
+  paginate: any;
+}; // Overrides `GetStaticPathsOptions` types from Astro
+
+export async function getStaticPaths({ paginate }: GetStaticPaths) {
+  const allProjects = await Astro.glob<FrontMatter>("./*.md");
+  const sortedProjects = sortByDate(allProjects);
+
+  // Return a paginated collection of paths for all projects
+  return paginate(sortedProjects, { pageSize: 6 });
+}
+
+interface Props {
+  page: FrontmatterPage;
+}
+
+const { page } = Astro.props as Props;
+const titleSuffix = ` - ${AppConfig.site_name}`;
+const titleBase = `Projects page ${page.currentPage}`;
+const title = titleBase + titleSuffix;
+const description =
+  "Pagination example built with Astro styled with Tailwind CSS.";
+---
+
+<Base head={{ title, description }}>
+  <Section>
+    <PaginationHeader
+      title="Projects"
+      description="List of projects build or in progress."
+    />
+  </Section>
+
+  <Section>
+    <ProjectsGallery projectsList={page.data} />
+  </Section>
+
+  <Section>
+    <NewerOlderPagination page={page} />
+  </Section>
+
+  <CTA />
+</Base>
